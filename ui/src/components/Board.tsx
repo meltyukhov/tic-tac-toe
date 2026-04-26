@@ -1,12 +1,17 @@
 import Row from "./Row.tsx";
+import styled from "styled-components";
+
+const StyledBoard = styled.div`
+  margin-top: 10px;
+`
 
 const Board = () => {
   return (
-    <div>
+    <StyledBoard>
       <Row/>
       <Row/>
       <Row/>
-    </div>
+    </StyledBoard>
   )
 }
 

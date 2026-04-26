@@ -1,12 +1,9 @@
-import Board from "./components/Board.tsx";
+import Game from "./components/Game.tsx";
 
 function App() {
 
   return (
-    <div>
-      Content
-      <Board/>
-    </div>
+    <Game/>
   )
 }
 
