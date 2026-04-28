@@ -39,7 +39,8 @@ Then open `http://localhost:5173` and click `Start Simulation`.
 Run backend tests from the repository root:
 
 ```bash
-mvn test
+mvn -f game-engine/pom.xml test
+mvn -f game-session/pom.xml test
 ```
 
 Run UI validation:
