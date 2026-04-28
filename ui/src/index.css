@@ -1,3 +1,23 @@
 :root {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #111827;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }

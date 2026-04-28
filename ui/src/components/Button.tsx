@@ -2,24 +2,42 @@ import type {ReactNode} from "react";
 import styled from "styled-components";
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+  disabled?: boolean;
+  onClick?: () => void;
+};
 
 const StyledButton = styled.button`
-    color: #fff;
-    background-color: #195de6;
-    border-style: none;
-    border-radius: 3px;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    padding: 3px 10px;
-    cursor: pointer;
-`
+  align-items: center;
+  background: #1658d4;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  transition: background-color 160ms ease, transform 160ms ease;
 
-const Button = ({children}: Props) => {
+  &:hover:not(:disabled) {
+    background: #1049b4;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background: #8ea4ca;
+    cursor: progress;
+  }
+`;
+
+const Button = ({onClick, disabled, children}: Props) => {
   return (
-   <StyledButton>{children}</StyledButton>
-  )
-}
+    <StyledButton disabled={disabled} onClick={onClick}>{children}</StyledButton>
+  );
+};
 
-export default Button
+export default Button;
